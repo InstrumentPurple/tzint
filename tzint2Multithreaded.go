@@ -118,7 +118,7 @@ func main(){
 		fmt.Println("tzint2Multithreaded.exe [trapezoid count] [left bound] [right bound] [exponent] [coef] ...")
 		os.Exit(0)
 	}
-	if ((len(os.Args) - 2) % 2) == 1 {
+	if ((len(os.Args) - 4) % 2) == 1 {
 		fmt.Println("odd number of polynomial arguments. Each exponent must be mapped to one coeffcient.")
 		os.Exit(0)
 	}

@@ -114,6 +114,11 @@ func sumRange(poly sync.Map, wg *sync.WaitGroup, TOTAL *AtomicFloat64, isEnd boo
 // tzint2Multithreaded.exe [trapezoid count] [left bound] [right bound] [exponent] [coef] ...
 /* EXAMPLE:  .\tzint2Multithreaded.exe 90000000 -1.5 1.5 2 -4 0 9 */
 func main(){
+	if len(os.Args) < 4 {
+		fmt.Println("tzint2Multithreaded.exe [trapezoid count] [left bound] [right bound] [exponent] [coef] ...")
+		os.Exit(0)
+	}
+
 	var wg sync.WaitGroup
 	var f sync.Map
 
